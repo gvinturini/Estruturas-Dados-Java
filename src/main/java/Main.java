@@ -1,5 +1,6 @@
 import com.digitalinnovation.fila.Fila;
 import com.digitalinnovation.fila.NoFila;
+import com.digitalinnovation.listaencadeada.ListaEncadeada;
 import com.digitalinnovation.pilha.No;
 import com.digitalinnovation.pilha.Pilha;
 
@@ -7,7 +8,23 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Fila<String> minhaFila = new Fila<>();
+        ListaEncadeada<String> minhaListaEncadeada = new ListaEncadeada<>();
+
+        minhaListaEncadeada.add("teste1");
+        minhaListaEncadeada.add("teste2");
+        minhaListaEncadeada.add("teste3");
+        minhaListaEncadeada.add("teste4");
+
+        System.out.println(minhaListaEncadeada.get(0));
+        System.out.println(minhaListaEncadeada.get(1));
+        System.out.println(minhaListaEncadeada.get(2));
+        System.out.println(minhaListaEncadeada.get(3));
+        System.out.println(minhaListaEncadeada.toString());
+        System.out.println(minhaListaEncadeada.remove(3));
+        System.out.println(minhaListaEncadeada.toString());
+
+        // Uso da Fila
+        /*Fila<String> minhaFila = new Fila<>();
 
         minhaFila.enqueue("primeiro");
         minhaFila.enqueue("segundo");
@@ -19,8 +36,7 @@ public class Main {
         System.out.println(minhaFila);
         minhaFila.enqueue("utlimo");
         System.out.println(minhaFila);
-        System.out.println(minhaFila.first());
-
+        System.out.println(minhaFila.first());*/
 
         // Uso da Pilha
         /*Pilha minhaPilha = new Pilha();
