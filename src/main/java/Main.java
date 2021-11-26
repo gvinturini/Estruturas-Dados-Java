@@ -1,5 +1,6 @@
 import com.digitalinnovation.fila.Fila;
 import com.digitalinnovation.fila.NoFila;
+import com.digitalinnovation.listacircular.ListaCircular;
 import com.digitalinnovation.listaduplamenteencadeada.ListaDuplamenteEncadeada;
 import com.digitalinnovation.listaencadeada.ListaEncadeada;
 import com.digitalinnovation.pilha.No;
@@ -9,7 +10,26 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ListaDuplamenteEncadeada<String> minhaLista = new ListaDuplamenteEncadeada<>();
+        ListaCircular<String> minhaListaCircular = new ListaCircular<>();
+
+        minhaListaCircular.add("c0");
+        System.out.println(minhaListaCircular);
+
+        minhaListaCircular.remove(0);
+        System.out.println(minhaListaCircular);
+
+        minhaListaCircular.add("c1");
+        minhaListaCircular.add("c2");
+        minhaListaCircular.add("c3");
+        System.out.println(minhaListaCircular);
+
+//        System.out.println(minhaListaCircular.get(4));
+        for (int i = 0; i < 20; i++) {
+            System.out.println(minhaListaCircular.get(i));
+        }
+
+        // Uso da lista duplamente encadeada
+        /*ListaDuplamenteEncadeada<String> minhaLista = new ListaDuplamenteEncadeada<>();
 
         minhaLista.add("c1");
         minhaLista.add("c2");
@@ -25,7 +45,7 @@ public class Main {
         minhaLista.add(3,"99");
         System.out.println(minhaLista);
 
-        System.out.println(minhaLista.get(3));
+        System.out.println(minhaLista.get(3));*/
 
         // Uso da Lista Encadeada
         /*ListaEncadeada<String> minhaListaEncadeada = new ListaEncadeada<>();
