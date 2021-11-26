@@ -1,5 +1,6 @@
 import com.digitalinnovation.fila.Fila;
 import com.digitalinnovation.fila.NoFila;
+import com.digitalinnovation.listaduplamenteencadeada.ListaDuplamenteEncadeada;
 import com.digitalinnovation.listaencadeada.ListaEncadeada;
 import com.digitalinnovation.pilha.No;
 import com.digitalinnovation.pilha.Pilha;
@@ -8,7 +9,26 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ListaEncadeada<String> minhaListaEncadeada = new ListaEncadeada<>();
+        ListaDuplamenteEncadeada<String> minhaLista = new ListaDuplamenteEncadeada<>();
+
+        minhaLista.add("c1");
+        minhaLista.add("c2");
+        minhaLista.add("c3");
+        minhaLista.add("c4");
+        minhaLista.add("c5");
+        minhaLista.add("c6");
+        minhaLista.add("c7");
+
+        System.out.println(minhaLista);
+
+        minhaLista.remove(3);
+        minhaLista.add(3,"99");
+        System.out.println(minhaLista);
+
+        System.out.println(minhaLista.get(3));
+
+        // Uso da Lista Encadeada
+        /*ListaEncadeada<String> minhaListaEncadeada = new ListaEncadeada<>();
 
         minhaListaEncadeada.add("teste1");
         minhaListaEncadeada.add("teste2");
@@ -21,7 +41,7 @@ public class Main {
         System.out.println(minhaListaEncadeada.get(3));
         System.out.println(minhaListaEncadeada.toString());
         System.out.println(minhaListaEncadeada.remove(3));
-        System.out.println(minhaListaEncadeada.toString());
+        System.out.println(minhaListaEncadeada.toString());*/
 
         // Uso da Fila
         /*Fila<String> minhaFila = new Fila<>();
