@@ -8,14 +8,33 @@ import com.digitalinnovation.listaduplamenteencadeada.ListaDuplamenteEncadeada;
 import com.digitalinnovation.listaencadeada.ListaEncadeada;
 import com.digitalinnovation.pilha.No;
 import com.digitalinnovation.pilha.Pilha;
+import com.digitalinnovation.stack.CarroStack;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 public class Main {
 
     public static void main(String[] args) {
 
+        Stack<CarroStack> stackCarros = new Stack<>();
+
+        stackCarros.push(new CarroStack("Ford"));
+        stackCarros.push(new CarroStack("Chevrolet"));
+        stackCarros.push(new CarroStack("Fiat"));
+
+        System.out.println(stackCarros);
+        System.out.println(stackCarros.pop());
+        System.out.println(stackCarros);
+
+        System.out.println(stackCarros.peek());
+        System.out.println(stackCarros);
+
+        System.out.println(stackCarros.empty());
+
+        // Uso de hashCode e equals
+        /*
         List<Carro> listaCarros = new ArrayList<>();
 
         listaCarros.add(new Carro("Ford"));
@@ -29,7 +48,7 @@ public class Main {
         Carro carro1 = new Carro("Ford");
         Carro carro2 = new Carro("Chevrolet");
 
-        System.out.println(carro1.equals(carro2));
+        System.out.println(carro1.equals(carro2));*/
 
         // Uso da Árvore binária
         /*ArvoreBinaria<Obj> minhaArvore = new ArvoreBinaria<>();
