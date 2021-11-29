@@ -1,5 +1,6 @@
 import com.digitalinnovation.arvorebinaria.ArvoreBinaria;
 import com.digitalinnovation.arvorebinaria.model.Obj;
+import com.digitalinnovation.equalshashcode.Carro;
 import com.digitalinnovation.fila.Fila;
 import com.digitalinnovation.fila.NoFila;
 import com.digitalinnovation.listacircular.ListaCircular;
@@ -8,11 +9,30 @@ import com.digitalinnovation.listaencadeada.ListaEncadeada;
 import com.digitalinnovation.pilha.No;
 import com.digitalinnovation.pilha.Pilha;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        ArvoreBinaria<Obj> minhaArvore = new ArvoreBinaria<>();
+        List<Carro> listaCarros = new ArrayList<>();
+
+        listaCarros.add(new Carro("Ford"));
+        listaCarros.add(new Carro("Chevrolet"));
+        listaCarros.add(new Carro("Volkswagen"));
+
+        System.out.println(listaCarros.contains(new Carro("Ford")));
+        System.out.println(new Carro("Ford").hashCode());
+        System.out.println(new Carro("Ford1").hashCode());
+
+        Carro carro1 = new Carro("Ford");
+        Carro carro2 = new Carro("Chevrolet");
+
+        System.out.println(carro1.equals(carro2));
+
+        // Uso da Árvore binária
+        /*ArvoreBinaria<Obj> minhaArvore = new ArvoreBinaria<>();
 
         minhaArvore.inserir(new Obj(13));
         minhaArvore.inserir(new Obj(10));
@@ -25,7 +45,7 @@ public class Main {
 
         minhaArvore.exibirInOrdem();
         minhaArvore.exibirPreOrdem();
-        minhaArvore.exibirPosOrdem();
+        minhaArvore.exibirPosOrdem();*/
 
         // Uso da lista circular
         /*ListaCircular<String> minhaListaCircular = new ListaCircular<>();
