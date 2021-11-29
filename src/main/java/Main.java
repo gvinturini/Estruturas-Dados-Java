@@ -1,3 +1,5 @@
+import com.digitalinnovation.arvorebinaria.ArvoreBinaria;
+import com.digitalinnovation.arvorebinaria.model.Obj;
 import com.digitalinnovation.fila.Fila;
 import com.digitalinnovation.fila.NoFila;
 import com.digitalinnovation.listacircular.ListaCircular;
@@ -10,7 +12,23 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ListaCircular<String> minhaListaCircular = new ListaCircular<>();
+        ArvoreBinaria<Obj> minhaArvore = new ArvoreBinaria<>();
+
+        minhaArvore.inserir(new Obj(13));
+        minhaArvore.inserir(new Obj(10));
+        minhaArvore.inserir(new Obj(25));
+        minhaArvore.inserir(new Obj(2));
+        minhaArvore.inserir(new Obj(12));
+        minhaArvore.inserir(new Obj(20));
+        minhaArvore.inserir(new Obj(31));
+        minhaArvore.inserir(new Obj(29));
+
+        minhaArvore.exibirInOrdem();
+        minhaArvore.exibirPreOrdem();
+        minhaArvore.exibirPosOrdem();
+
+        // Uso da lista circular
+        /*ListaCircular<String> minhaListaCircular = new ListaCircular<>();
 
         minhaListaCircular.add("c0");
         System.out.println(minhaListaCircular);
@@ -26,7 +44,7 @@ public class Main {
 //        System.out.println(minhaListaCircular.get(4));
         for (int i = 0; i < 20; i++) {
             System.out.println(minhaListaCircular.get(i));
-        }
+        }*/
 
         // Uso da lista duplamente encadeada
         /*ListaDuplamenteEncadeada<String> minhaLista = new ListaDuplamenteEncadeada<>();
