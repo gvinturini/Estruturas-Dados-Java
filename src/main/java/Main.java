@@ -10,6 +10,7 @@ import com.digitalinnovation.listaencadeada.ListaEncadeada;
 import com.digitalinnovation.pilha.No;
 import com.digitalinnovation.pilha.Pilha;
 import com.digitalinnovation.queue.CarroQueue;
+import com.digitalinnovation.set.CarroSet;
 import com.digitalinnovation.stack.CarroStack;
 
 import java.util.*;
@@ -18,7 +19,30 @@ public class Main {
 
     public static void main(String[] args) {
 
-        List<CarroList> listCarros = new ArrayList<>();
+        Set<CarroSet> hashSetCarros = new HashSet<>();
+
+        hashSetCarros.add(new CarroSet("Ford"));
+        hashSetCarros.add(new CarroSet("Chevrolet"));
+        hashSetCarros.add(new CarroSet("Fiat"));
+        hashSetCarros.add(new CarroSet("Peugeot"));
+        hashSetCarros.add(new CarroSet("Zip"));
+        hashSetCarros.add(new CarroSet("Alfa Romeo"));
+
+        System.out.println(hashSetCarros);
+
+        Set<CarroSet> treeSetCarros = new TreeSet<>();
+
+        treeSetCarros.add(new CarroSet("Ford"));
+        treeSetCarros.add(new CarroSet("Chevrolet"));
+        treeSetCarros.add(new CarroSet("Fiat"));
+        treeSetCarros.add(new CarroSet("Peugeot"));
+        treeSetCarros.add(new CarroSet("Zip"));
+        treeSetCarros.add(new CarroSet("Alfa Romeo"));
+
+        System.out.println(treeSetCarros);
+
+        // Uso de List
+        /*List<CarroList> listCarros = new ArrayList<>();
 
         listCarros.add(new CarroList("Ford"));
         listCarros.add(new CarroList("Chevrolet"));
@@ -30,7 +54,7 @@ public class Main {
 
         System.out.println(listCarros.indexOf(new CarroList("Fiat")));
         System.out.println(listCarros.remove(2));
-        System.out.println(listCarros);
+        System.out.println(listCarros);*/
 
         // Uso de Queue
         /*Queue<CarroQueue> queueCarros = new LinkedList<>();
