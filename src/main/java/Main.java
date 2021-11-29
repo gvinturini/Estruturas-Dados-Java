@@ -8,17 +8,41 @@ import com.digitalinnovation.listaduplamenteencadeada.ListaDuplamenteEncadeada;
 import com.digitalinnovation.listaencadeada.ListaEncadeada;
 import com.digitalinnovation.pilha.No;
 import com.digitalinnovation.pilha.Pilha;
+import com.digitalinnovation.queue.CarroQueue;
 import com.digitalinnovation.stack.CarroStack;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Stack<CarroStack> stackCarros = new Stack<>();
+
+
+        // Uso de Queue
+        /*Queue<CarroQueue> queueCarros = new LinkedList<>();
+
+        queueCarros.add(new CarroQueue("Ford"));
+        queueCarros.add(new CarroQueue("Chevrolet"));
+        queueCarros.add(new CarroQueue("Fiat"));
+
+        System.out.println(queueCarros.add(new CarroQueue("Peugeot")));
+        System.out.println(queueCarros);
+
+        System.out.println(queueCarros.offer(new CarroQueue("Renault")));
+        System.out.println(queueCarros);
+        System.out.println(queueCarros.peek());
+        System.out.println(queueCarros);
+
+        System.out.println(queueCarros.poll());
+        System.out.println(queueCarros);
+
+        System.out.println(queueCarros.isEmpty());
+
+        System.out.println(queueCarros.size());*/
+
+        // Uso de Stack
+        /*Stack<CarroStack> stackCarros = new Stack<>();
 
         stackCarros.push(new CarroStack("Ford"));
         stackCarros.push(new CarroStack("Chevrolet"));
@@ -31,7 +55,7 @@ public class Main {
         System.out.println(stackCarros.peek());
         System.out.println(stackCarros);
 
-        System.out.println(stackCarros.empty());
+        System.out.println(stackCarros.empty());*/
 
         // Uso de hashCode e equals
         /*
