@@ -3,6 +3,7 @@ import com.digitalinnovation.arvorebinaria.model.Obj;
 import com.digitalinnovation.equalshashcode.Carro;
 import com.digitalinnovation.fila.Fila;
 import com.digitalinnovation.fila.NoFila;
+import com.digitalinnovation.list.CarroList;
 import com.digitalinnovation.listacircular.ListaCircular;
 import com.digitalinnovation.listaduplamenteencadeada.ListaDuplamenteEncadeada;
 import com.digitalinnovation.listaencadeada.ListaEncadeada;
@@ -17,7 +18,19 @@ public class Main {
 
     public static void main(String[] args) {
 
+        List<CarroList> listCarros = new ArrayList<>();
 
+        listCarros.add(new CarroList("Ford"));
+        listCarros.add(new CarroList("Chevrolet"));
+        listCarros.add(new CarroList("Fiat"));
+        listCarros.add(new CarroList("Peugeot"));
+
+        System.out.println(listCarros.contains(new CarroList("Ford")));
+        System.out.println(listCarros.get(2));
+
+        System.out.println(listCarros.indexOf(new CarroList("Fiat")));
+        System.out.println(listCarros.remove(2));
+        System.out.println(listCarros);
 
         // Uso de Queue
         /*Queue<CarroQueue> queueCarros = new LinkedList<>();
